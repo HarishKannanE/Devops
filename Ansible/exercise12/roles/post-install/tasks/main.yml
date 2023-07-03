@@ -1,0 +1,63 @@
+---
+# tasks file for post-install
+
+- name: Install NTP service
+  yum:
+    name: "{{item}}"
+    state: present
+  when: ansible_distribution == "CentOS"
+  loop:
+    - ntp
+    - wget
+    - git
+    - zip
+    - unzip
+
+- name: Install NTP on ubuntu
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: yes
+  when: ansible_distribution == "Ubuntu"
+  loop:
+    - ntp
+    - wget
+    - git
+    - zip
+    - unzip
+
+- name: Adding group
+  group:
+    name: devops
+    state: present
+
+- name: Adding users
+  user:
+    name: "{{item}}"
+    state: present
+    groups: devops
+  loop: "{{usernames}}"
+
+- name: Banner file /etc/motd
+  copy:
+    content: "This {{ansible_distribution}} is Managed by Ansible. \n"
+    dest: /etc/motd
+
+- name: Deploy NTP conf file for Redhat
+  template:
+    src: ntp_redhat.conf.j2
+    dest: "{{ntp_path}}"
+  notify:
+    - Restart NTP on Redhat
+
+- name: Dir for dev data
+  file:
+    path: /opt/devdata
+    state: directory
+    mode: 0775
+
+- name: Deploy dev data file
+  copy:
+    src: dev.txt
+    dest: /opt/devdata/dev.txt
+

@@ -1,0 +1,3 @@
+# Variable accessible by websrvgrp
+USRNM: websrvgrpuser
+COMM: variables from group_vars/websrvgrp file
