@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+
+    config.vm.define "ansibleserver" do |ansibleserver|
+        ansibleserver.vm.box = "CrunchyData/alma9"
+        ansibleserver.vm.hostname = "ansibleserver"
+        ansibleserver.vm.network "private_network", ip: "10.0.0.1"
+    end
+  
+    config.vm.define "minttest" do |minttest|
+        minttest.vm.box = "aaronvonawesome/linux-mint-20-cinnamon"
+        minttest.vm.hostname = "minttest"
+        minttest.vm.network "private_network", ip: "10.0.0.2"
+    end
+  
+    config.vm.define "wintest" do |wintest|
+        wintest.vm.box = "Microsoft/EdgeOnWindows10"
+        wintest.vm.box_version = "1.0"
+        wintest.vm.hostname = "wintest"
+        wintest.vm.network "private_network", ip: "10.0.0.3"
+    end
+end
