@@ -1,0 +1,18 @@
+---
+- name: Shutdown system
+  hosts: servers
+  become: true
+
+  tasks:
+    - name: Poweroff Linux Machines
+      command: shutdown -h now
+      when: ansible_distribution == "AlmaLinux"
+
+    - name: Power off Windows machine
+      hosts: windows
+      gather_facts: false
+      tasks:
+        - name: Power off machine
+          win_reboot:
+            shutdown: yes
+      when: ansible_distribution == ""

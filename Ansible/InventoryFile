@@ -1,0 +1,20 @@
+# Inventory file for Ansible playbook
+
+web01 ansible_host=172.31.80.165
+web02 ansible_host=172.31.82.55
+db01 ansible_host=172.31.87.28
+
+[websrvgrp]
+web01
+web02
+
+[dbsrvgrp]
+db01
+
+[dc_ohio:children]
+websrvgrp
+dbsrvgrp
+
+[dc_ohio:vars]
+ansible_user=centos
+ansible_ssh_private_key_file=vprofile-key.pem

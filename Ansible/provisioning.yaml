@@ -1,0 +1,18 @@
+# condition in ansible
+---
+- name: Provisioning Server
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install NTP service
+    yum:
+      name: ntp
+      state: present
+    when: ansible_distribution == "CentOS"
+
+  - name: Install NTP on ubuntu
+    apt:
+      name: ntp
+      state: present
+    when: ansible_distribution == "Ubuntu"
