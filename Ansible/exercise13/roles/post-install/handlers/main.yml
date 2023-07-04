@@ -1,0 +1,8 @@
+---
+# handlers file for post-install
+
+- name: Restart NTP on Redhat
+  service:
+    name: ntpd
+    state: restarted
+    enabled: yes
