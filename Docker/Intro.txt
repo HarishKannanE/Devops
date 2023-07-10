@@ -1,0 +1,4 @@
+Docker
+
+We Isolate Services
+    To host our apps we need infrastructure

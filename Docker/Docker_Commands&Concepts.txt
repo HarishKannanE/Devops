@@ -1,0 +1,65 @@
+Docker Commands
+# docker images 
+    to show list of local images 
+
+# docker ps -a
+    to show  running images
+  -a 
+    to show all the images running/stopped
+
+# docker pull <image name>
+    to download docker image
+
+# docker pull <image:tag>
+    to download specific version of an image
+
+# docker run --name <name> -p <host_port>:<service_port> -d <image name>
+    to run an container using specified image
+  -p
+    to specify connection ports
+  -d
+    to run the image in background
+
+# docker stop <id/name>
+    to stop docker container
+
+# docker start <name>
+    to start an container
+
+# ps -ef 
+    to list process and recognize docker process id
+
+# docker exec <container name> <command>
+    to execute command within a container
+
+# docker exec -it <container name> /bin/bash
+    to get into container shell
+  exec
+    execute 
+  -i
+    to interact
+  -t
+    to specify tty
+
+# docker rmi <image name:tag>
+    to delete an image
+  rmi
+    remove image
+
+# docker run -it ubuntu /bin/bash
+    to run an os as an container
+  -i
+    to interact
+  -t
+    to specify tty
+
+# docker logs <container name/id>
+    to inspect logs
+
+Bind-mount
+# docker run --name vprofiledb -d -e MYSQL_ROOT_PASSWORD=asd123. -p 3030:3306 -v /home/ubuntu/vprodbdata:/var/lib/mysql mysql:5.7
+    to connect systemvolume to container volume 
+  -v
+    to specify which host directory to connect with remote volume
+  -e 
+    to specify environment variable 
