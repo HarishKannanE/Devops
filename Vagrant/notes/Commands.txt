@@ -1,0 +1,31 @@
+Vagrant Commands
+
+To downlaod vagrant file of prefered vagrant box
+    # vagrant init <box name>
+
+To start vagrant box that is initiated 
+    # vagrant up
+
+To list downloaded vagrant boxes
+    # vagrant box list 
+
+To check vm status 
+    # vagrant status 
+
+To login to the vm
+    # vagrant ssh
+
+To power off the vm
+    # vagrant halt
+
+To reboot the vm
+    # vagrant reload
+
+To delete a vm 
+    # vagrant destroy
+
+To show status of every active vm's
+    # vagrant global-status 
+
+To remove invalid entries form global status file
+    # vagrant global-status --prune

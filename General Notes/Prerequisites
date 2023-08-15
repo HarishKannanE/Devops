@@ -1,0 +1,36 @@
+
+Sign Ups
+
+Git hub account
+Domain Purchase (Godady)
+Dockerhub
+Sonarcloud
+
+
+Tools
+
+Vm Virtualbox
+Git Bash
+Vagrant
+Chocolatey/Brew
+JDK8
+Maven
+Vscode
+AWS Cli
+    Free tier account
+    Iam with MFA
+    Billing Alarm
+        - Go to billing dashboard
+        - Go to billing preferences
+        - Enable invoice delivery preferences (enable)
+        - Alert preferences (enable)
+        - Go to Cloudwatch
+        - Go to alarms 
+        - Go to create alarms
+        - Select metric
+        - Select billing
+        - Create an sns topic
+        - Give alarm a name 
+        - Create alarm 
+        - Confirm in gmail
+    Certificate setup (SSL)
