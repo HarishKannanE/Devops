@@ -1,6 +1,14 @@
 Files
     /var/log/messages 
         (system log file (rpm based))
+    /etc/passwd
+        (system user config file)
+    /etc/group
+        (system group config file)
+    # visudo
+        (open sudoers file)
+    /etc/sudoers
+        (sudoers file)
 
 linux commands
     General Syntax
@@ -14,12 +22,20 @@ linux commands
 
 
     # ls
+        (list current working directory)
+            -l
+                (long list)
+            -d
+                (specify directory)
 
 
     # cat
 
 
-    # sudo -i
+    # sudo 
+        (super user privilages)
+            -i
+                (normal user to root user)
 
 
     # cd
@@ -120,6 +136,48 @@ linux commands
     # locate
 
 
+    # id 
+
+
+    # useradd
+
+
+    # passwd
+
+
+    # groupadd
+
+
+    # gpasswd
+
+
+    # usermod
+
+
+    # groupmod
+
+
+    # su
+
+
+    # last
+        (to show users that logged in lately)
+
+    
+    # lsof 
+        (to check user logs)
+
+
+    # userdel
+
+
+    # chown
+        (to change ownership)
+            -R
+                (reccursive)
+
+
+    # chmod
+
+
     # 
-
-
