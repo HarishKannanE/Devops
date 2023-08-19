@@ -1,0 +1,125 @@
+Files
+    /var/log/messages 
+        (system log file (rpm based))
+
+linux commands
+    General Syntax
+        command     options     arguments
+    
+    
+    # whoami
+
+    
+    # pwd
+
+
+    # ls
+
+
+    # cat
+
+
+    # sudo -i
+
+
+    # cd
+
+
+    # clear
+
+
+    # uptime
+
+
+    # free
+
+    
+    # exit
+
+
+    # mkdir
+
+
+    # touch
+
+
+    # cp
+
+
+    # --help
+
+
+    # mv
+
+
+    # rm
+
+
+    # vim
+        :se nu 
+            (to give section number to lines)
+        nyy 
+            (to copy n number of lines)
+        ndd 
+            (to cut n number of lines)
+        p 
+            (to paste below the cursor)
+        P 
+            (to paste above the cursor)
+        nG 
+            (to move cursor to nth line)
+    
+
+    # grep
+        # grep home < /etc/passwd 
+            (to input something to a command)
+        # grep home * 
+            (to search the pattern in every file in the current directory)
+        -R 
+            (to search inside a directory)
+        -v 
+            (search exept the pattern)
+
+
+    # less
+
+
+
+    # more
+
+
+    # head
+
+
+    # tail
+        -f (to display live change)
+
+
+    # cut
+        # cut -d: -f1 /etc/passwd
+            (to show first coloum that is seperated by coloum (:))
+                -d 
+                    (dlimiter)
+                -f
+                    (field seperater)
+    
+
+    # awk 
+
+
+    # sed
+        # sed -i 's/nologin/login/g' *
+            (to search nologin and replace it with login for every file in the current directory)
+                -i  
+                    (replace)
+    
+
+    # find
+
+
+    # locate
+
+
+    # 
+
+
