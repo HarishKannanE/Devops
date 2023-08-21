@@ -1,4 +1,5 @@
-Files
+Files (centos)
+
     /var/log/messages 
         (system log file (rpm based))
     /etc/passwd
@@ -9,6 +10,21 @@ Files
         (open sudoers file)
     /etc/sudoers
         (sudoers file)
+            %devops     ALL=(ALL)       NOPASSWD: ALL
+                (adding group to sudoers file)
+            devops      ALL=(ALL)       NOPASSWD: ALL
+                (adding users to sudoers file)
+    /etc/systemd/system/multi-user.target.wants/<service name>.service
+        (systemctl package config file)
+
+Files
+
+    /etc/apt/sources.list
+        (repo list for apt)
+
+Directorys
+    /etc/yum.repos.d
+        (yum repo directory)
 
 linux commands
     General Syntax
@@ -180,4 +196,117 @@ linux commands
     # chmod
 
 
-    # 
+    # tree
+
+
+    # curl 
+        (to download form internet)
+            -o
+                (to save output to a specified file)
+    
+    # rpm 
+        (to install an rpm package)
+
+            options:
+
+                -i
+                    (to specify the file to be installed)
+                -v
+                    (verbros)
+                -h
+                    (to print hash marks as percentage install(good with -v))
+                -q
+                    (querry)
+                -a
+                    (all)
+                -e
+                    (erase)
+                -U
+                    (upgrade)
+                -f
+                    (verify which package it belong to)
+            
+            example:
+            
+                # rpm -qa
+                    (to querry all the installed rpm packages)
+                # rpm -e <package name>
+                    (to remove an rpm package)
+                # rpm -qf <package name>
+                    (to query which package file belong to)
+
+    # yum 
+
+
+    # systemctl
+        (to manage installed services in the system)
+            
+            options:
+
+                is-active
+                    (to check weather a service is active or not)
+                is-enabled
+                    (to check weather a service is enabled or not)
+            
+            example:
+
+                # systemctl is-active <service name>
+
+
+
+    # top
+
+
+    # ps
+        (to list current processes)
+
+        options:
+
+            -e
+                (select all processes)
+            -f
+                (full format listing)
+
+
+    # kill
+        (to kill a process)
+
+            options:
+
+                -9
+                    (to terminate process forcefully)
+
+
+    # xargs
+
+
+    # tar 
+        (to archive files and directories)
+
+            options:
+
+                -C
+                    (to specify directory to extract)
+
+
+    # file
+
+
+    # zip    
+
+
+    # unzip
+
+
+    # export
+
+Difference between centos commands and ubuntu commands
+
+    # useradd and adduser
+
+    # export EDITOR=vim
+        (temporary changing of vi editor to vim)
+
+    # dpkg (for rpm)
+
+    # apt (for yum)
