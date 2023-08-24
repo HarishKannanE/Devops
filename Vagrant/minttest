@@ -1,13 +1,40 @@
+# using vagrant version 2 do config 
 Vagrant.configure("2") do |config|
 
+    # config virtual machine "minttest" do "minttest"
     config.vm.define "minttest" do |minttest|
+        
+        # specifies vagrant box name 
         minttest.vm.box = "aaronvonawesome/linux-mint-20-cinnamon"
+        
+        # specifies hostname for vm
         minttest.vm.hostname = "minttest"
-        minttest.vm.network "private_network", ip: "10.0.0.2"
-        minttest.vm.disk :disk, size: "20GB", primary: true
+
+        # specifies private network having ip address 192.168.56.11
+        minttest.vm.network "private_network", ip: "192.168.56.11"
+
+        # specifies to configure a public network
+        minttest.vm.network "public_network"
+
+        # to specify hardware configuration
         minttest.vm.provider "virtualbox" do |vb|
+            
+            # specifies ram size
             vb.memory = "1024"
+
+            # specifies core count
             vb.cpus = "1"
         end
+
+        # to sync host folder to guest folder
+        minttest.vm.synced_folder "/home/ragnar/scripts", "/opt/scripts"
+
+        # to provision (execute commands after vm setup)
+        # provision using shell with below commands (inline)
+        minttest.vm.provision "shell", inline: <<-SHELL
+            apt update 
+            apt install -y apache2
+        SHELL
+
     end
 end

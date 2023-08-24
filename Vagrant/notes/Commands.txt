@@ -1,4 +1,12 @@
 Vagrant Commands
+----------------
+
+files
+    (vagrant default file storage)
+        ~/.vagrant.d
+
+Basics
+------
 
 To downlaod vagrant file of prefered vagrant box
     # vagrant init <box name>
@@ -24,8 +32,17 @@ To reboot the vm
 To delete a vm 
     # vagrant destroy
 
+To delete a vm forcefully
+    # vagrant destroy --force
+
 To show status of every active vm's
     # vagrant global-status 
 
 To remove invalid entries form global status file
     # vagrant global-status --prune
+
+Vagrant Sync directory
+----------------------
+
+Default sync directory inside vm
+    /vagrant -> host vm directory
