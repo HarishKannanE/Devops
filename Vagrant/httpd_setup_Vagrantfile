@@ -1,0 +1,36 @@
+# httpd custom website vagrant vm
+Vagrant.configure("2") do |config|
+
+    config.vm.define "minttest" do |minttest|
+        
+        minttest.vm.box = "aaronvonawesome/linux-mint-20-cinnamon"
+        
+        minttest.vm.hostname = "minttest"
+
+        minttest.vm.network "private_network", ip: "192.168.56.11"
+
+        minttest.vm.network "public_network"
+
+        minttest.vm.provider "virtualbox" do |vb|
+            
+            vb.memory = "1024"
+
+            vb.cpus = "1"
+        end
+
+        minttest.vm.provision "shell", inline: <<-SHELL
+            yum install httpd wget unzip vim -y
+            systemctl start httpd
+            systemctl enable httpd
+            mkdir -p /tmp/finance
+            cd /tmp/finance
+            wget "link"
+            unzip -o filename.zip
+            cp -r file/* /var/www/html/
+            systemctl restart httpd
+            cd /tmp/ 
+            rm -rf /tmp/*
+        SHELL
+
+    end
+end

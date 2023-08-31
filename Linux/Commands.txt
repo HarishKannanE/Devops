@@ -16,8 +16,10 @@ Files (centos)
                 (adding users to sudoers file)
     /etc/systemd/system/multi-user.target.wants/<service name>.service
         (systemctl package config file)
+    /etc/hostname
+        (Hostname file)
 
-Files
+Files (ubuntu)
 
     /etc/apt/sources.list
         (repo list for apt)
