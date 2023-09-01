@@ -2,8 +2,8 @@
 
 # Variables
 var1 = "Python"   # string
-var2 = "75"       # integer
-var3 = "3.5"      # float
+var2 = 75       # integer
+var3 = 3.5      # float
 
 # Printing Variables
 print(var1)

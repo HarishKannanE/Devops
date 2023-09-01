@@ -1,0 +1,41 @@
+python code
+-----------
+
+devops={"skill":"Devops", "Year":2023, "Tech":{"Cloud":"AWS", "Containers":"K8s", "CICD":"Jenkins", "Gitops":["Gitlab", "ArgoCD", "Tekton"]}}
+print(devops)
+
+Json code
+---------
+
+devops=
+    {
+        "skill":"Devops",
+        "Year":2023,
+        "Tech":
+            {
+                "Cloud":"AWS", 
+                "Containers":"K8s", 
+                "CICD":"Jenkins", 
+                "Gitops":
+                    [
+                        "Gitlab", 
+                        "ArgoCD", 
+                        "Tekton"
+                    ]
+            }
+    }
+
+Yaml code
+---------
+
+devops:
+    skill: Devops
+    Year: 2023
+    Tech:
+        Cloud: AWS 
+        Containers: K8s 
+        CICD: Jenkins
+        Gitops:
+            - Gitlab 
+            - ArgoCD 
+            - Tekton
