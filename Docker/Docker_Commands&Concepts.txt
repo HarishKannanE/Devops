@@ -1,4 +1,6 @@
 Docker Commands
+---------------
+
 # docker images 
     to show list of local images 
 
@@ -57,6 +59,8 @@ Docker Commands
     to inspect logs
 
 Bind-mount
+----------
+
 # docker run --name vprofiledb -d -e MYSQL_ROOT_PASSWORD=asd123. -p 3030:3306 -v /home/ubuntu/vprodbdata:/var/lib/mysql mysql:5.7
     to connect systemvolume to container volume 
   -v

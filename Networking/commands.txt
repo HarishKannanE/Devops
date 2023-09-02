@@ -1,0 +1,36 @@
+Linux
+-----
+
+# ifconfig
+    (to get ip information)
+
+# ping
+    (to check connectivity)
+
+# tracert
+    (list hops to the destination)
+
+# netstat -antp
+    (to get open tcp ports)
+
+# nmap
+    (scanning ports of the target)
+
+# dig
+    (dig dns resolution)
+
+# route -n 
+    (to show gateways)
+
+# arp 
+    (show arp table)
+
+# mtr 
+    (live traceroute)
+
+# telnet
+    (open ports)
+
+
+Windows
+-------
