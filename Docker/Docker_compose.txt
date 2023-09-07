@@ -1,0 +1,11 @@
+Docker compose Commands 
+-----------------------
+
+# docker compose up -d
+    (to run containers from docker compose file)
+-d
+    (to run in back-ground)
+
+# docker compose down
+    (to stop containers created by docker compose)
+    

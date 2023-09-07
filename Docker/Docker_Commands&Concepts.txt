@@ -19,6 +19,8 @@ Docker Commands
     to run an container using specified image
   -p
     to specify connection ports
+  -P
+    to automatically select host port
   -d
     to run the image in background
 
@@ -58,6 +60,14 @@ Docker Commands
 # docker logs <container name/id>
     to inspect logs
 
+# docker build -t <image name> <location of docker file>
+    to build an image using docker file
+  -t 
+    tag the image
+
+# docker system prune -a
+  (to remove unused images from docker)
+  
 Bind-mount
 ----------
 
